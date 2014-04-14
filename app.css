@@ -1,0 +1,18 @@
+/* app css stylesheet */
+ #mysvg{
+    width: 100%;
+    height: 600px;
+    border:1px solid black;
+    background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAAAXNSR0IArs4c6QAAAAZQTFRF9/f3////TOsULwAAABRJREFUCNdjYGD4/5+BigR1TWMAAO29P8H0ss2LAAAAAElFTkSuQmCC") repeat;
+    cursor:default;
+  }
+
+  input[type='radio']{
+    display: inline;
+  }
+  rect,path,g,ellipse{
+    -webkit-transform-origin:initial;
+    -moz-transform-origin:initial;
+    -o-transform-origin:initial;
+    transform-origin:initial;
+  }

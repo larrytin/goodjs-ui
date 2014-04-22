@@ -3,4 +3,13 @@ node_js:
   - 0.10
 before_script:
     - npm install -g grunt-cli
+after_script:
+    - pwd
+    - git remote add deploy https://github.com/shangmin1990/bower-goodjs-ui
+    - git add goodjs-ui.js
+    - git add goodjs-ui.min.js
+    - git commit -m "generator by grunt"
+    - git push deploy master
+
+
 

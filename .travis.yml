@@ -1,23 +1,20 @@
 language: node_js
 node_js:
-  - 0.10
+- 0.1
 before_script:
-    - git config --global user.email "${GIT_EMAIL}"
-    - git config --global user.name "${GIT_NAME}"
-    - npm install -g grunt-cli
+- git config --global user.email "${GIT_EMAIL}"
+- git config --global user.name "${GIT_NAME}"
+- npm install -g grunt-cli
 after_script:
-    - mkdir ../bower-goodjs-ui & cp -r goodjs-ui.* ../bower-goodjs-ui/
-    - cp .bower.json ../bower-goodjs-ui
-    - cd ../bower-goodjs-ui
-    - mv .bower.json bower.json
-    - git init & git remote add deploy https:${GH_TOKEN}//github.com/shangmin1990/bower-goodjs-ui
-    - git add .
-    - git commit -m "generator by grunt"
-    - git push -f deploy master
+- mkdir ../bower-goodjs-ui & cp -r goodjs-ui.* ../bower-goodjs-ui/
+- cp .bower.json ../bower-goodjs-ui
+- cd ../bower-goodjs-ui
+- mv .bower.json bower.json
+- git init
+- git remote add deploy https://${GH_TOKEN}@github.com/shangmin1990/bower-goodjs-ui
+- git add .
+- git commit -m "generator by grunt"
+- git push -f deploy master
 env:
-   global:
-      - secure: iGGMyT6VN7gUr7BdACbruYVw5I42/+yCFZP8LSYhgBVD6tAOZR40RglGcmVytCJwM/6g/ltDIxySmCaSpoXTZfhcu2xyvLPso3Z35k24F2Xwmfvnz5P3JwDb7XqUEiH6KfVZMFnfCMjgR7Q8K1k+QvOhWsDwGgk6uQyQnqKiM8Q=
-
-
-
-
+  global:
+  - secure: eFSQzIY6Tg+HlfqHbLwUeKUQyJvbpDK66TlfC/IoySO901jXrgkpAt1AAGVST0zrqM2RQCbdwxm9woMSiqvw4GVijbmqmTc8SG8+GUHgDEk7+eAmeA9eA38smTeWwYIFY4aJm9wPQZKDL/NGVsOi8VVaNvA2sdxKQpIa3xZlLyA=

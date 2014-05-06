@@ -1,0 +1,3 @@
+[submodule "bower-goodjs-ui"]
+	path = bower-goodjs-ui
+	url = https://github.com/shangmin1990/bower-goodjs-ui.git

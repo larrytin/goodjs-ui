@@ -6,14 +6,8 @@ before_script:
 - git config --global user.name "${GIT_NAME}"
 - npm install -g grunt-cli
 after_script:
-- mkdir ../bower-goodjs-ui & cp -r goodjs-ui.* ../bower-goodjs-ui/
-- cp .bower.json ../bower-goodjs-ui
-- cd ../bower-goodjs-ui
-- mv .bower.json bower.json
-- git init
-- git remote add deploy https://${GH_TOKEN}@github.com/shangmin1990/bower-goodjs-ui
 - git add .
-- git commit -m "generator by grunt"
+- git commit -m "generator by gulp @{TRAVIS_COMMIT}"
 - git push -f deploy master
 env:
   global:

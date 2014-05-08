@@ -25,5 +25,4 @@ gulp.task('uglify', function () {
         .pipe(gulp.dest('./bower-goodjs-ui'));
 });
 
-
 gulp.task('default', ['concat','jshint','uglify']);

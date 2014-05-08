@@ -1,8 +1,6 @@
 /* Services */
 
-
 var serviceModule;
-
 // Demonstrate how to register services
 // In this case it is a simple value service.
 (function(window,angular,undefined){
@@ -57,7 +55,7 @@ var serviceModule;
   .factory('goodowConstant', function(){
     return {
       SVG_SID:'someaddress.s',
-      SERVER:'http://test.goodow.com:8080/eventbus'
+      SERVER:'http://realtime.goodow.com:8080/eventbus'
     }
   })
   .factory('realtimeService',['goodowConstant',function(goodowConstant){

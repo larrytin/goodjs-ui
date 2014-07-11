@@ -25,4 +25,21 @@ gulp.task('uglify', function () {
         .pipe(gulp.dest('./bower-goodjs-ui'));
 });
 
+gulp.task('concat_local', function () {
+  gulp.src(path.scripts)
+      .pipe(concat('goodjs-ui.js'))
+      .pipe(gulp.dest('../drive-web/app/bower_components/goodjs-ui/'));
+});
+gulp.task('uglify_local', function () {
+  gulp.src(path.scripts)
+      .pipe(uglify())
+      .pipe(concat('goodjs-ui.min.js'))
+      .pipe(gulp.dest('../drive-web/app/bower_components/goodjs-ui/'));
+});
+
+
 gulp.task('default', ['concat','jshint','uglify']);
+gulp.task('local', ['concat_local','uglify_local']);
+gulp.task('watch', function() {
+  gulp.watch(path.scripts, ['local']);
+});

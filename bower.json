@@ -2,11 +2,12 @@
   "name":"goodjs-ui",
   "description":"goodjs-ui",
   "dependencies": {
-      "realtime-channel":"goodow/bower-realtime-channel",
+      "realtime-store": "gh-pages",
       "d3":"3.4.6",
+      "angular": "1.2.14",
       "angular-touch":"1.2.14",
       "bootstrap":"3.1.1",
-      "angular-bootstrap":"0.10.0"
+      "angular-bootstrap":"0.10.0",
   },
   "repository":{
       "type":"git",
